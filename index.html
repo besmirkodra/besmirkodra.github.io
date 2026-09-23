@@ -296,15 +296,16 @@
     }
 
     /* ===================== SKILLS ===================== */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
     .skill-category {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 1rem;
-      padding: 1.5rem;
+      padding: 1.15rem 1rem;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
+      min-width: 0;
     }
     .skill-category::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -327,7 +328,7 @@
     .skill-row { margin-bottom: 1rem; }
     .skill-percent, .skill-bar-bg { display: none; }
     .skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
-    .skill-name { font-size: 0.9rem; font-weight: 500; }
+    .skill-name { font-size: 0.825rem; font-weight: 500; }
     .skill-percent {
       font-size: 0.8rem; font-weight: 700;
       font-family: 'JetBrains Mono', monospace;
@@ -680,6 +681,9 @@
       nav .links { display: none; }
       .mobile-menu-btn { display: block; }
       .section-title { font-size: 1.6rem; }
+      .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
     }
 
     /* Reduce motion */
@@ -989,6 +993,54 @@
     </div>
     <div class="skill-bar-bg">
       <div class="skill-bar-fill green" data-width="90"></div>
+    </div>
+  </div>
+
+</div>
+      <div class="skill-category animate-on-scroll stagger-5">
+  <h3>Hardware & Repair</h3>
+
+  <!-- Row 1: PC Building & Maintenance -->
+  <div class="skill-row">
+    <div class="skill-header">
+      <span class="skill-name">PC Assembly & Hardware Upgrades</span>
+      <span class="skill-percent"><span class="counter" data-target="90">0</span>%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar-fill orange" data-width="90"></div>
+    </div>
+  </div>
+
+  <!-- Row 2: Smartphone Hardware & Software -->
+  <div class="skill-row">
+    <div class="skill-header">
+      <span class="skill-name">Smartphone Repair (HW & SW Flashing)</span>
+      <span class="skill-percent"><span class="counter" data-target="85">0</span>%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar-fill orange" data-width="85"></div>
+    </div>
+  </div>
+
+  <!-- Row 3: Printers & Photocopiers -->
+  <div class="skill-row">
+    <div class="skill-header">
+      <span class="skill-name">Printers & Photocopier Maintenance</span>
+      <span class="skill-percent"><span class="counter" data-target="85">0</span>%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar-fill orange" data-width="85"></div>
+    </div>
+  </div>
+
+  <!-- Row 4: Cabling, CCTV & Security Systems -->
+  <div class="skill-row">
+    <div class="skill-header">
+      <span class="skill-name">Network Cabling, CCTV & Alarms</span>
+      <span class="skill-percent"><span class="counter" data-target="80">0</span>%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar-fill orange" data-width="80"></div>
     </div>
   </div>
 
